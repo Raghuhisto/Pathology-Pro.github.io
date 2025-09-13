@@ -140,3 +140,26 @@ html
     <li>Breast lesions - Fine needle aspiration biopsy, Core needle biopsy</li>
   </ul>
 </section>
+html
+<section id="daily-tips">
+  <h2>Daily Tips</h2>
+  <ul id="tips-list">
+    <!-- Daily tips will be added here -->
+  </ul>
+</section>
+
+And a script to add tips:
+html
+<script>
+  const tips = [
+    "Tip 1: Always examine skin lesions under low power first.",
+    "Tip 2: Look for lymphovascular invasion in breast cancer.",
+    // Add more tips here
+  ];
+  const tipsList = document.getElementById('tips-list');
+  tips.forEach(tip => {
+    const li = document.createElement('li');
+    li.textContent = tip;
+    tipsList.appendChild(li);
+  });
+</script>
